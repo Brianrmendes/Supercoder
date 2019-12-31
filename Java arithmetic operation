@@ -21,4 +21,4 @@ public class JavaProgram
     System.out.println("Multiplication = " + mul);
     System.out.println("Division = " + div);
   }
-}
+} 
