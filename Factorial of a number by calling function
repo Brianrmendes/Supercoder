@@ -6,8 +6,8 @@ void main()
 int a,n;
 printf(“Enter the number :”);
 scanf (“%d", &n);
-printf(“factorial is:”);
 a=factorial(n);
+printf(“factorial is:%d”, a);
 }
 
 int factorial(int x)
