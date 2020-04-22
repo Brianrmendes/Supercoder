@@ -1,0 +1,40 @@
+#include<stdio.h> 
+struct student 
+{ 
+char name[20]; 
+int roll_no; 
+int phy,chem,maths,total; 
+}; 
+void main () 
+{ 
+struct student s[100],temp; 
+int n,i,j; 
+clrscr(); 
+printf("Enter the number of students"); 
+scanf("%d",&n); 
+for(i=0;i<=n-1;i++) 
+{ 
+printf("Enter the students name, roll no and mks in three subjects:"); 
+scanf("%s %d %d %d %d",s[i].name, &s[i].roll_no,&s[i].phy,&s[i].chem,&s[i].maths); 
+s[i].total=s[i].phy+s[i].chem+s[i].maths; 
+}
+for(i=0;i<=n-1;i++) 
+{ 
+for(j=0;j<=n-2;j++) 
+{ 
+if(s[j].total<s[j+1].total) 
+{ 
+temp=s[j]; 
+s[j]=s[j+1]; 
+s[j+1]=temp; 
+} 
+} 
+} 
+printf("Name\tRoll No\tPhy\tChem\tMaths\tTotal\n"); 
+printf("----------------------------------------------\n"); 
+for(i=0;i<=n-1;i++) 
+{ 
+printf("%s\t%d\t%d\t%d\t%d\t
+%d\n",s[i].name,s[i].roll_no,s[i].phy,s[i].chem,s[i].maths,s[i].total); 
+} 
+}
