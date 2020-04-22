@@ -31,7 +31,6 @@ s[j+1]=temp;
 } 
 } 
 printf("Name\tRoll No\tPhy\tChem\tMaths\tTotal\n"); 
-printf("----------------------------------------------\n"); 
 for(i=0;i<=n-1;i++) 
 { 
 printf("%s\t%d\t%d\t%d\t%d\t
